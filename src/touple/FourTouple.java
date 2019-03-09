@@ -1,18 +1,21 @@
 package touple;
 
-public class fourTouple {
+public class FourTouple {
 
     public Taeter _taeter;
     public Waffe _waffe;
     public Ort _ort;
     public Spieler _spieler;
 
-    public fourTouple(Taeter taeter, Waffe waffe, Ort ort, Spieler spieler) {
+    public FourTouple(Taeter taeter, Waffe waffe, Ort ort, Spieler spieler) {
         _taeter = taeter;
         _waffe = waffe;
         _ort = ort;
         _spieler = spieler;
     }
+
+
+
 
     @Override
     public int hashCode() {
@@ -30,8 +33,8 @@ public class fourTouple {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof fourTouple) {
-            fourTouple that = (fourTouple) obj;
+        if (obj instanceof FourTouple) {
+            FourTouple that = (FourTouple) obj;
             return this._taeter == that._taeter
                     && this._waffe == that._waffe
                     && this._ort == that._ort
@@ -66,7 +69,40 @@ public class fourTouple {
         return "(" + teaterString + ",\t " + waffeString + ",\t " + ortString + ",\t " + spielerString + ")";
     }
 
-    public fourTouple getCopy() {
-        return new fourTouple(_taeter, _waffe, _ort, _spieler);
+    public FourTouple getCopy() {
+        return new FourTouple(_taeter, _waffe, _ort, _spieler);
     }
+
+    public Taeter getTaeter() {
+        return _taeter;
+    }
+
+    public void setTaeter(Taeter _taeter) {
+        this._taeter = _taeter;
+    }
+
+    public Waffe getWaffe() {
+        return _waffe;
+    }
+
+    public void setWaffe(Waffe _waffe) {
+        this._waffe = _waffe;
+    }
+
+    public Ort getOrt() {
+        return _ort;
+    }
+
+    public void setOrt(Ort _ort) {
+        this._ort = _ort;
+    }
+
+    public Spieler getSpieler() {
+        return _spieler;
+    }
+
+    public void setSpieler(Spieler _spieler) {
+        this._spieler = _spieler;
+    }
+
 }
